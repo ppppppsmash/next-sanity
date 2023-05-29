@@ -8,7 +8,9 @@ import {deskTool} from 'sanity/desk'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import {apiVersion, dataset, projectId} from './sanity/env'
-import {schema} from './sanity/schema'
+import {schema} from '@/sanity/schema'
+import { myTheme } from '@/theme'
+import { StudioNavbar } from '@/components/StudioNavbar'
 
 export default defineConfig({
   basePath: '/studio',
@@ -24,4 +26,11 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
   ],
+  studio: {
+    components: {
+      //logo: Logo,
+      navbar: StudioNavbar
+    }
+  },
+  theme: myTheme
 })
