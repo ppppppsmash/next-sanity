@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner'
 import Header from '@/components/Header'
 import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={inter.className}>
         <Header />
+        <Banner />
         {children}
       </body>
     </html>

@@ -16,7 +16,15 @@ export default function Header() {
         </Link>
         <h1>Pei</h1>
       </div>
-      <div></div>
+      <div>
+        <Link
+          href='/'
+          className='px-5 py-3 text-sm md:text-base bg-gray-900 text-[#93E6B4]
+          flex items-center rounded-full text-center'
+        >
+          楽しい日常
+        </Link>
+      </div>
     </header>
   )
 }
