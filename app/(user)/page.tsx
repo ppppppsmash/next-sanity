@@ -2,6 +2,8 @@ import { draftMode } from 'next/headers'
 import { groq } from 'next-sanity'
 import { client } from '@/lib/sanity.client'
 import PreviewSuspense from '@/components/PreviewSuspense'
+import PreviewBlogList from '@/components/PreviewBlogList'
+import BlogList from '@/components/BlogList'
 
 const query = groq`
   *[_type=='post'] {
@@ -24,6 +26,7 @@ export default async function Home() {
           </p>
         </div>
       )}>
+        <PreviewBlogList query={query} />
       </PreviewSuspense>
     )
   }
@@ -31,8 +34,6 @@ export default async function Home() {
   
 
   return (
-    <div>
-      <h1>{posts}</h1>
-    </div>
+    <BlogList posts={posts} />
   )
 }
