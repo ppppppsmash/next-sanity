@@ -1,4 +1,5 @@
 import { urlFor } from "@/lib/urlFor"
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid"
 import Image from "next/image"
 
 type Props = {
@@ -10,7 +11,7 @@ export default function BlogList({ posts }: Props) {
     <div>
       <hr className='border-[#93E6B4] mb-10' />
 
-      <div>
+      <div className='grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24'>
         {posts.map((post) => (
           <div
             className='group flex-col cursor-pointer'
@@ -54,8 +55,9 @@ export default function BlogList({ posts }: Props) {
               <p className='line-clamp-2 text-gray-500'>{post.description}</p>
             </div>
 
-            <p>
-              Read Post
+            <p className='mt-5 font-bold flex items-center group-hover:underline'>
+              もっと
+              <ArrowUpRightIcon className='ml-2 h-4 w-4' />
             </p>
           </div>
         ))}
