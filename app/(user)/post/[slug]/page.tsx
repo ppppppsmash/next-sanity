@@ -32,8 +32,20 @@ export default async function Post({ params: { slug }}: Props) {
               alt={post.author.name}
               fill
             />
-
           </div>
+
+          <section>
+            <div>
+              <div>
+                <h1>
+
+                </h1>
+                <p>
+                  
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
     </article>
