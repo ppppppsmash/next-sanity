@@ -24,6 +24,7 @@ const search = async (searchTerm: string ) => {
     ${process.env.API_KEY}`
   )
 
+  throw new Error('エラー！')
   const data: SearchResult = await res.json()
   return data
 }
