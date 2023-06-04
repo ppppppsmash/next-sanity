@@ -43,7 +43,7 @@ export default function BlogList({ posts }: Props) {
 
                   <div className='flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center'>
                       {post.categories.map((category) => (
-                        <div className='bg-[#93E6B4] text-center text-black px-3
+                        <div key={post._id} className='bg-[#93E6B4] text-center text-black px-3
                           py-1 rounded-full text-sm font-semibold'
                         >
                           <p>{category.title}</p>
