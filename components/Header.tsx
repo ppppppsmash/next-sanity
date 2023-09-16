@@ -4,25 +4,32 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className='flex items-center justify-between space-x-2 font-bold px-10 py-5'>
-      <div className='flex items-center space-x-2'>
-        <Link href='/'>
-          <Image
-            className='rounded-full'
+      <div className='flex items-center space-x-4'>
+        <Link
+          className='bg-[url("/love~.png")] w-[160px] h-[160px] rounded-full
+            flex bg-center shadow-lg'
+          href='/'
+        >
+          {/* <Image
+            className=''
             src='/love~.png'
             width={100}
-            height={50}
+            height={100}
             alt='logo'
-          />
+          /> */}
         </Link>
-        <h1>Pei</h1>
+        <h1 className='text-4xl font-bold bg-gradient-to-r from-amber-300 via-rose-400 to-violet-800
+          bg-clip-text tracking-tight text-transparent'>liming.pei</h1>
       </div>
       <div>
         <Link
-          href='/'
-          className='px-5 py-3 text-sm md:text-base bg-gray-900 text-[#93E6B4]
-          flex items-center rounded-full text-center'
+          href='https://kurosawa-portfolio.vercel.app/'
+          target='_blank'
+          className='px-5 py-3 text-sm md:text-base bg-gray-950 text-white
+          flex items-center rounded-full text-center transition duration-400
+          hover:scale-[0.95]'
         >
-          楽しい日常
+          Portfolio
         </Link>
       </div>
     </header>
