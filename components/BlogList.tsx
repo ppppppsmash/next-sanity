@@ -20,12 +20,12 @@ export default function BlogList({ posts }: Props) {
             <div className='flex flex-col group cursor-pointer'>
               <div className='relative w-full h-80 drop-shadow-xl group-hover:scale-105
                 transition-transform duration-200 ease-out'>
-                <Image
+                {/* <Image
                   className='object-cover object-left lg:object-center'
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
                   fill
-                />
+                /> */}
                 <div className='absolute bottom-0 w-full bg-opacity-20 bg-black
                   backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between'>
                   <div>
@@ -42,7 +42,7 @@ export default function BlogList({ posts }: Props) {
                   </div>
 
                   <div className='flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center'>
-                      {post.categories.map((category) => (
+                      {post.categories?.map((category) => (
                         <div key={post._id} className='bg-[#93E6B4] text-center text-black px-3
                           py-1 rounded-full text-sm font-semibold'
                         >
