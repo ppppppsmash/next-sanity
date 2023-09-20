@@ -12,7 +12,7 @@ export function StudioNavbar(props: any) {
 
         <div className='hidden md:flex p-5 rounded-lg justify-center border-2 border-[#93E6B4]'>
           <h1 className='font-bold text-white'>
-            テキストテキストテキスト
+            Pei's 個人ブログ
           </h1>
           <Link
             className='text-#93E6B4 font-bold ml-2'
