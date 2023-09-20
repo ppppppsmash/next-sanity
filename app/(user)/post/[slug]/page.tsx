@@ -42,7 +42,7 @@ export default async function Post({ params: { slug }}: Props) {
   const post: Post = await client.fetch(query, { slug })
   return (
     <article className='px-10 pb-28'>
-      <section className='space-y-2 border border-[#93E6B4] text-white'>
+      <section className='space-y-2 border border-amber-300 text-white mb-4'>
         <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
           <div className='absolute top-0 w-full h-full opacity-10 blur-sm p-10'>
             <Image
@@ -53,7 +53,7 @@ export default async function Post({ params: { slug }}: Props) {
             />
           </div>
 
-          <section className='p-5 bg-[#93E6B4] w-full'>
+          <section className='p-5 bg-amber-300 w-full'>
             <div className='flex flex-col md:flex-row justify-between gap-y-5'>
               <div>
                 <h1 className='text-4xl font-extrabold'>

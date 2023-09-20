@@ -10,13 +10,6 @@ export default function Header() {
             flex bg-center shadow-lg'
           href='/'
         >
-          {/* <Image
-            className=''
-            src='/love~.png'
-            width={100}
-            height={100}
-            alt='logo'
-          /> */}
         </Link>
         <h1 className='text-4xl font-bold bg-gradient-to-r from-amber-300 via-rose-400 to-violet-800
           bg-clip-text tracking-tight text-transparent'>liming.pei</h1>
