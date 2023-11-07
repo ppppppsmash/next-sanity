@@ -16,9 +16,17 @@ module.exports = {
       animation: {
         typing: 'typing-pulse 1.35s steps(1, end) infinite',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100%',
+          }
+        }
+      },
     },
   },
   plugins: [
-    require('@tailwindcss/line-clamp')
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
   ],
 }

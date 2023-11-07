@@ -40,9 +40,10 @@ export default async function Post({ params: { slug }}: Props) {
   `
 
   const post: Post = await client.fetch(query, { slug })
+
   return (
     <article className='px-10 pb-28 w-full'>
-      <div className='ring-1 ring-zinc-100'>
+      <div>
         <section className='space-y-2 border border-amber-300 text-white mb-4'>
           <div className='relative min-h-56 flex flex-col md:flex-row justify-between'>
             <div className='absolute top-0 w-full h-full opacity-10 blur-sm p-10'>
@@ -104,10 +105,12 @@ export default async function Post({ params: { slug }}: Props) {
           </div>
         </section>
 
-        <PortableText
-          value={post.body}
-          components={RichTextComponents}
-        />
+        <article className='px-10 pb-28 w-full prose'>
+          <PortableText
+            value={post.body}
+            components={RichTextComponents}
+          />
+        </article>
       </div>
     </article>
   )
